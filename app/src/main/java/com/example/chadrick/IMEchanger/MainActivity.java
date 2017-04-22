@@ -9,11 +9,14 @@ import android.os.IBinder;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputMethod;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -52,7 +55,29 @@ public class MainActivity extends AppCompatActivity {
 
         notificationManager.notify(0,n);
 
-        Toast.makeText(this, "IMESwitcher added!", Toast.LENGTH_SHORT).show();
+        /*
+
+        set up toast with custom look
+         */
+        LayoutInflater inflator = getLayoutInflater();
+        View customlook = inflator.inflate(R.layout.toastlayout,null);
+
+        TextView toasttext = (TextView) customlook.findViewById(R.id.toasttext);
+        toasttext.setText(R.string.toast_text);
+
+        Toast customtoast = new Toast(getApplicationContext());
+
+        customtoast.setView(customlook);
+        customtoast.setDuration(Toast.LENGTH_SHORT);
+        customtoast.show();
+//
+//        Toast toast = Toast.makeText(this, "IMESwitcher added!", Toast.LENGTH_SHORT);
+//        View vieew = toast.getView();
+//        vieew.setBackgroundResource(R.drawable.toastshape);
+//        toast.setView(vieew);
+//
+//        toast.show();
+
 
         this.finish();
 
