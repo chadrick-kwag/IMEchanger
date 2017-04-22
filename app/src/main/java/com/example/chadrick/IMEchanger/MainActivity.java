@@ -36,16 +36,16 @@ public class MainActivity extends AppCompatActivity {
 
 
         intent = new Intent(this, launchwindow.class);
-        PendingIntent pIntent = PendingIntent.getActivity(this, (int) System.currentTimeMillis(), intent ,0);
+        PendingIntent pIntent = PendingIntent.getActivity(this, 0 , intent ,0);
 
 
         notificationManager = (NotificationManager) getApplicationContext().getSystemService(NOTIFICATION_SERVICE);
         n = new Notification.Builder(getApplicationContext())
-                .setContentTitle("content title")
-                .setContentText("content text")
-                .setSmallIcon(R.drawable.ic_stat_name)
+                .setContentTitle("IME changer")
+                .setContentText("click button below to open IME picker")
+                .setSmallIcon(R.drawable.ic_keyboard_white_48dp)
                 .setAutoCancel(false)
-                .addAction(R.drawable.ic_stat_name,"gofor",pIntent)
+                .addAction(R.drawable.ic_keyboard_arrow_right_white_48dp,"SWITCH",pIntent)
                 .build();
 
         n.flags |= Notification.FLAG_NO_CLEAR;

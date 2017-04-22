@@ -39,7 +39,7 @@ public class launchwindow extends Activity {
         }
 
 
-//        System.out.println("wfwfwfwfwfwwffwfwfwfw");
+
 
 
     }
@@ -55,6 +55,9 @@ public class launchwindow extends Activity {
         }
 
     }
+
+
+
 
 
 

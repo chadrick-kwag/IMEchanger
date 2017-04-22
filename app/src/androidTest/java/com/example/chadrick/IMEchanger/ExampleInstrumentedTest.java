@@ -1,4 +1,4 @@
-package com.example.chadrick.IMEchanger.;
+package com.example.chadrick.IMEchanger;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
