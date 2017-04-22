@@ -46,10 +46,10 @@ public class launchwindow extends Activity {
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus){
-        super.onWindowFocusChanged(hasFocus);
-        Log.d("launchwindow","on window focus changed");
+            super.onWindowFocusChanged(hasFocus);
+            Log.d("launchwindow","on window focus changed");
 
-        if(state==1){
+            if(state==1){
             Log.d(TAG,"status back to 1");
             this.finish();
         }

@@ -9,8 +9,27 @@
     </style>
     <style name="customstyle" parent="@android:style/Theme.Light.NoTitleBar">
 
-        <item name='android:windowContentOverlay'>@null</item>
-        <item name="android:windowBackground">@null</item>
+
+        <item name="android:background">#00000000</item> <!-- Or any transparency or color you need -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+    <style name="appcompat_custom" parent="@style/Theme.AppCompat.NoActionBar">
+        <!--<item name="android:windowBackground"> @android:color/transparent </item>-->
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+        <!--<item name="android:windowNoDisplay">true</item>-->
+        <!--<item name="android:windowNoTitle">true</item>-->
+
+        <item name="android:background">#00000000</item> <!-- Or any transparency or color you need -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+
     </style>
 
 </resources>
